@@ -25,7 +25,7 @@ int getUserInput()
         printf("----------------------------------------\n\tYou chose %s\n", input);
         return 1;
     }
-    else if (strcmp("Paper", input) == 0 || strcmp("Paper", input) == 0)
+    else if (strcmp("Paper", input) == 0 || strcmp("paper", input) == 0)
     {
         printf("----------------------------------------\n\tYou chose %s\n", input);
         return 2;
@@ -74,7 +74,7 @@ int startGame()
     {
         printf("\tIt's a TIE !\n");
     }
-    else if (userResult < computerResult)
+    else if (userResult < computerResult || userResult == 3 && computerResult == 1)
     {
         printf("\tYou LOST...\n");
     }
