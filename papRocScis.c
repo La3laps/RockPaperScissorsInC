@@ -30,7 +30,7 @@ int getUserInput()
 
     printDottedLine();
 
-    red();
+    green();
     printf("\tRock, Paper, Scissors ?\n\t");
     white();
     cyan();
@@ -53,7 +53,7 @@ int getUserInput()
     else if (strcmp(input, "Scissors") == 0 || strcmp(input, "scissors") == 0)
     {
         printf("\tYou chose ");
-        printChoice(2);
+        printChoice(3);
         return 3;
     }
     else
@@ -98,11 +98,11 @@ int startGame()
     {
         printf("\tIt's a TIE !\n");
     }
-    else if (userResult < computerResult || userResult == 3 && computerResult == 1)
+    else if (userResult == 1 && computerResult == 2 || userResult == 2 && computerResult == 3 || userResult == 3 && computerResult == 1)
     {
         printf("\tYou LOST...\n");
     }
-    else if (userResult > computerResult)
+    else
     {
         printf("\tYou WON!!!\n");
     }
